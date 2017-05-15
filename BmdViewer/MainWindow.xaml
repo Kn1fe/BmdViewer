@@ -1,0 +1,19 @@
+﻿<Window x:Class="BmdViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hvd="http://helix-toolkit.org/wpf"
+        mc:Ignorable="d"
+        Title="BmdViewer by Kn1fe-Zone.Ru Team" Height="350" Width="525">
+    <Grid>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Load Buildings.pck" Click="MenuItem_Click"></MenuItem>
+        </Menu>
+        <hvd:HelixViewport3D Name="Viewport" ShowFrameRate="True" ShowCoordinateSystem="True" CameraRotationMode="Trackball" AllowDrop="True" Drop="Viewport_Drop" Margin="0,30,0,20">
+            <hvd:SunLight />
+            <ModelVisual3D x:Name="Model" />
+        </hvd:HelixViewport3D>
+        <ProgressBar Name="Progress" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="10" Margin="0,0,0,5"/>
+    </Grid>
+</Window>
